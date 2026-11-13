@@ -1,0 +1,55 @@
+:root {
+  --wall: #7db0cc;
+  --ink: #1d3957;
+  --paper: #f7f4ee;
+  --gold: #7ba6f2;
+  --indigo: #5959a0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--wall);
+}
+
+.back-link {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  background: var(--paper);
+}
+
+.back-link::before {
+  width: 0.65rem;
+  height: 0.65rem;
+  transform: translateX(0.12rem) rotate(225deg);
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  content: "";
+}
+
+.back-link:hover {
+  background: var(--gold);
+}
+
+.back-link:focus-visible {
+  outline: 3px solid var(--indigo);
+  outline-offset: 4px;
+}
+
+@media (max-width: 520px) {
+  .back-link {
+    top: 1rem;
+    left: 1rem;
+  }
+}

@@ -1,6 +1,4 @@
 /* Revist - style.css */
-
-/* Color palette */
 :root {
   --wall: #7db0cc;
   --ink: #1d3957;
@@ -31,7 +29,7 @@ img {
   position: absolute;
   top: -4rem;
   left: 1rem;
-  z-index: 1;
+  z-index: 3;
   padding: 0.6rem 1rem;
   background-color: var(--paper);
   border: 2px solid var(--ink);
@@ -52,7 +50,6 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -68,13 +65,13 @@ header {
 }
 
 .logo {
+  display: grid;
   width: 64px;
   height: 64px;
-  border-radius: 12px;
-  background-color: var(--ink);
-  color: var(--gold);
-  display: grid;
   place-items: center;
+  border-radius: 12px;
+  color: var(--gold);
+  background-color: var(--ink);
   font-size: 2rem;
   font-weight: 700;
 }
@@ -86,11 +83,10 @@ h1 {
 }
 
 .tagline {
-  margin: 0;
   max-width: 32ch;
+  margin: 0;
 }
 
-/* Two-column layout */
 main {
   display: grid;
   grid-template-columns: minmax(14rem, 0.8fr) minmax(0, 1.2fr);
@@ -98,7 +94,6 @@ main {
   padding: 2rem 3rem;
 }
 
-/* Left menu */
 .menu {
   display: flex;
   flex-direction: column;
@@ -112,25 +107,27 @@ main {
 .menu a:nth-child(1) { width: 100%; }
 .menu a:nth-child(2) { width: 90%; }
 .menu a:nth-child(3) { width: 80%; }
+.menu a:nth-child(4) { width: 90%; }
 
 .menu-title {
   display: block;
   padding: 0.9rem 1.25rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  background-color: var(--paper);
   border: 2px solid var(--ink);
   border-radius: 10px;
+  background-color: var(--paper);
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .menu-desc {
   display: inline-block;
+  max-width: calc(100% - 1.25rem);
   margin-left: 1.25rem;
   padding: 0.4rem 1rem;
-  font-size: 0.95rem;
-  background-color: var(--ink);
-  color: var(--paper);
   border-radius: 0 0 10px 10px;
+  color: var(--paper);
+  background-color: var(--ink);
+  font-size: 0.95rem;
 }
 
 .menu a:hover .menu-title {
@@ -143,11 +140,6 @@ main {
   outline-offset: 3px;
 }
 
-.menu-desc {
-  max-width: calc(100% - 1.25rem);
-}
-
-/* Hero image */
 .hero {
   margin: 0;
 }
@@ -160,26 +152,25 @@ main {
   border-radius: 14px;
 }
 
-/* Featured capsules */
 .featured {
   margin-top: 2.5rem;
   scroll-margin-top: 1.5rem;
+  text-align: center;
 }
 
 .featured h2 {
   width: fit-content;
   margin: 0 auto 0.5rem;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  background-color: var(--paper);
   border: 2px solid var(--ink);
   border-radius: 8px;
+  background-color: var(--paper);
+  font-size: 1.2rem;
 }
 
 .section-intro {
-  margin: 0 auto;
   max-width: 55ch;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .shelf {
@@ -203,14 +194,12 @@ main {
   display: block;
   margin-top: 1.5rem;
   padding: 0.6rem;
-  background-color: var(--paper);
   border: 2px solid var(--ink);
   border-radius: 8px;
+  background-color: var(--paper);
 }
 
-/* Hanging string and nail */
 .frame::before {
-  content: "";
   position: absolute;
   top: -1.4rem;
   left: 50%;
@@ -220,10 +209,10 @@ main {
   background:
     linear-gradient(to top right, transparent calc(50% - 1px), var(--string) 50%, transparent calc(50% + 1px)) left / 50% 100% no-repeat,
     linear-gradient(to top left, transparent calc(50% - 1px), var(--string) 50%, transparent calc(50% + 1px)) right / 50% 100% no-repeat;
+  content: "";
 }
 
 .frame::after {
-  content: "";
   position: absolute;
   top: -1.7rem;
   left: 50%;
@@ -232,6 +221,7 @@ main {
   transform: translateX(-50%);
   border-radius: 50%;
   background-color: var(--ink);
+  content: "";
 }
 
 .frame img {
@@ -252,8 +242,8 @@ main {
 }
 
 .page-sections {
-  grid-column: 1 / -1;
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   scroll-margin-top: 1.5rem;
@@ -262,9 +252,9 @@ main {
 .info-card {
   min-width: 0;
   padding: 1.5rem;
-  background-color: var(--paper);
   border: 2px solid var(--ink);
   border-radius: 12px;
+  background-color: var(--paper);
   scroll-margin-top: 1.5rem;
 }
 
@@ -279,25 +269,24 @@ main {
   text-underline-offset: 0.15em;
 }
 
-/* Bottom navigation */
 .bottom-nav {
   position: fixed;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  background-color: var(--paper);
-  border: 2px solid var(--ink);
-  border-left: 0;
-  border-bottom: 0;
-  border-radius: 0 12px 0 0;
   z-index: 2;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  border: 2px solid var(--ink);
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 12px 0 0;
+  background-color: var(--paper);
 }
 
 .bottom-nav a {
   padding: 1rem 1.75rem;
+  border-right: 2px solid var(--ink);
   font-weight: 700;
   text-decoration: underline;
-  border-right: 2px solid var(--ink);
 }
 
 .bottom-nav a:last-child {
@@ -318,12 +307,11 @@ main {
   }
 }
 
-/* Tablets and phones */
 @media (max-width: 860px) {
   header,
   main {
-    padding-left: 1.25rem;
     padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
 
   main {
@@ -402,5 +390,4 @@ main {
     padding: 0.8rem 0.35rem;
     font-size: 0.9rem;
   }
-
 }
