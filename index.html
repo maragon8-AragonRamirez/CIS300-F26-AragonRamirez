@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore Revist, a thoughtful way to collect memories, create a digital time capsule, and revisit meaningful moments in the future.">
-  <title>Revist | Digital Time Capsules</title>
+  <meta name="description" content="Revist is a concept for saving meaningful moments in time capsules and opening them again in the future.">
+  <meta name="theme-color" content="#7db0cc">
+  <title>Revist | Save a moment for later</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&amp;family=Caveat:wght@500&amp;display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header>
+  <header class="site-header">
     <div class="logo" aria-hidden="true">R</div>
     <div class="brand">
       <h1>Revist</h1>
@@ -22,17 +23,17 @@
 
   <main id="main-content">
     <nav class="menu" aria-label="Explore Revist">
-      <a href="#discover">
+      <a href="discover.html">
         <span class="menu-title">Discover</span>
-        <span class="menu-desc">Browse sample community capsules</span>
+        <span class="menu-desc">Browse shared sample capsules</span>
       </a>
-      <a href="about.html">
-        <span class="menu-title">About</span>
-        <span class="menu-desc">Learn what Revist is all about</span>
+      <a href="nostalgia.html">
+        <span class="menu-title">Nostalgia science</span>
+        <span class="menu-desc">Explore the research behind remembering</span>
       </a>
-      <a href="#contact">
-        <span class="menu-title">Contact</span>
-        <span class="menu-desc">Find project contact information</span>
+      <a href="account.html">
+        <span class="menu-title">Account</span>
+        <span class="menu-desc">Create a sample account</span>
       </a>
       <a href="example.html">
         <span class="menu-title">Example</span>
@@ -40,41 +41,51 @@
       </a>
     </nav>
 
-    <section class="showcase" aria-label="Featured memories">
+    <section class="showcase" aria-label="A preview of Revist">
       <figure class="hero">
-        <img src="hero.svg" alt="Blank sample image placeholder" width="800" height="600">
+        <img src="hero.svg" alt="Blank sample image placeholder for a saved memory" width="800" height="600">
       </figure>
 
-      <div class="featured" id="discover">
-        <h2>Open a Window into a Memory</h2>
-        <p class="section-intro">These sample capsules show how a small collection of moments can tell a bigger story.</p>
-        <div class="shelf">
+      <section class="featured" aria-labelledby="featured-title">
+        <h2 id="featured-title">A moment, kept for later</h2>
+        <p class="section-intro">A Revist capsule gathers photos, notes, and little details from a moment you want to revisit. Choose a future date, seal it away, and let time make the memory even more meaningful.</p>
+        <p class="home-actions">
+          <a class="action-link" href="discover.html">Explore shared capsules</a>
+          <a class="action-link action-link-light" href="account.html">Make your own sample</a>
+        </p>
+        <div class="shelf" aria-label="Sample image placeholders">
           <figure class="capsule">
             <span class="frame"><img src="capsule1.svg" alt="Blank sample image placeholder" width="400" height="400"></span>
+            <figcaption class="meta">A day on the road</figcaption>
           </figure>
           <figure class="capsule">
             <span class="frame"><img src="capsule2.svg" alt="Blank sample image placeholder" width="400" height="400"></span>
+            <figcaption class="meta">Around the table</figcaption>
           </figure>
           <figure class="capsule">
             <span class="frame"><img src="capsule3.svg" alt="Blank sample image placeholder" width="400" height="400"></span>
+            <figcaption class="meta">First pages</figcaption>
           </figure>
         </div>
-      </div>
+      </section>
     </section>
 
-    <div class="page-sections">
-      <section class="info-card">
-        <h2>Keep a little something for later</h2>
-        <p>Browse a sample capsule or learn more about the idea behind Revist.</p>
-        <p id="contact">Contact</p>
-      </section>
-    </div>
+    <section class="info-card" id="how-it-works">
+      <h2>Small moments, saved with intention</h2>
+      <p>Think of a time capsule as a note to your future self. Choose what to save, pick a date to open it, and decide whether the memory should stay private or be shared with the community.</p>
+      <p>This class-project preview uses sample content only. The forms demonstrate the idea; they do not create accounts or store personal information.</p>
+      <p><a href="nostalgia.html">Explore the science of nostalgia</a></p>
+    </section>
   </main>
 
-  <nav class="bottom-nav" aria-label="Footer">
-    <a href="#contact">Contact</a>
-    <a href="about.html">About</a>
-    <a href="#main-content">Back to top</a>
-  </nav>
+  <footer class="site-footer">
+    <p>Revist is a student project concept about revisiting meaningful memories.</p>
+    <nav aria-label="Footer">
+      <a href="discover.html">Discover</a>
+      <a href="nostalgia.html">Nostalgia science</a>
+      <a href="account.html">Account</a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hello%40revist.example">Email the sample project address</a>
+    </nav>
+  </footer>
 </body>
 </html>

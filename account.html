@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Preview the Revist account sign-up form and see an example of a personal time capsule. This class-project form does not save data.">
+  <meta name="theme-color" content="#7db0cc">
+  <title>Account Preview | Revist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&amp;family=Caveat:wght@500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="content.css">
+  <script src="account.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="page-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">R</span> Revist</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="nostalgia.html">Nostalgia science</a>
+      <a href="example.html">Example</a>
+    </nav>
+  </header>
+
+  <main class="content-main account-main" id="main-content">
+    <section class="page-intro">
+      <p class="eyebrow">A note to your future self</p>
+      <h1>Your Revist account</h1>
+      <p>This page previews how someone might start an account and choose a first capsule. The form is for the class project only; it does not create an account or save your information.</p>
+    </section>
+
+    <div class="account-layout">
+      <section class="content-panel" aria-labelledby="signup-title">
+        <h2 id="signup-title">Create a sample account</h2>
+        <p class="form-warning">Demo only: please use made-up details and never enter a real password. Nothing is sent or saved.</p>
+        <form id="account-form" action="#" method="post">
+          <label for="display-name">Display name</label>
+          <input id="display-name" name="display-name" type="text" autocomplete="nickname" required>
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="password">Sample password</label>
+          <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+
+          <label for="capsule-title">First capsule title</label>
+          <input id="capsule-title" name="capsule-title" type="text" placeholder="A day worth keeping" required>
+
+          <label for="open-date">When would you revisit it?</label>
+          <input id="open-date" name="open-date" type="date" required>
+
+          <label class="checkbox-label" for="share-capsule">
+            <input id="share-capsule" name="share-capsule" type="checkbox">
+            Mark this sample capsule as public in Discover
+          </label>
+
+          <button class="primary-button" type="submit">Preview account</button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="content-panel preview-panel" aria-labelledby="preview-title">
+        <p class="eyebrow">Your example capsule</p>
+        <h2 id="preview-title">A laugh. A note.</h2>
+        <img src="capsule1.svg" alt="Blank sample image placeholder for a personal capsule" width="400" height="400">
+        <p>A sample memory collection with a future opening date. In a real account, this is where your saved capsule would appear.</p>
+        <a class="primary-button button-link" href="example.html">View sample capsule</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>This account flow is a nonfunctional class-project preview.</p>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover capsules</a>
+      <a href="nostalgia.html">Nostalgia science</a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hello%40revist.example">Email the sample project address</a>
+    </nav>
+  </footer>
+</body>
+</html>

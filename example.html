@@ -14,14 +14,19 @@
   <a class="skip-link" href="#example">Skip to the example</a>
   <header class="example-header">
     <a class="brand" href="index.html"><span class="brand-mark">R</span> Revist</a>
-    <a class="back-link" href="index.html#discover">← Back to Revist</a>
+    <nav aria-label="Main navigation">
+      <a class="back-link" href="index.html">Home</a>
+      <a class="back-link" href="discover.html">Discover</a>
+      <a class="back-link" href="nostalgia.html">Science</a>
+      <a class="back-link" href="account.html">Account</a>
+    </nav>
   </header>
 
   <main class="example-scene" id="example">
     <div class="scene-copy">
-      <p class="eyebrow">A summer capsule · 2031</p>
-      <h1>A laugh. A note.<br><em>The light that day.</em></h1>
-      <p class="scene-caption">02 / 05 &nbsp; · &nbsp; OPENED FIVE YEARS LATER</p>
+      <p class="eyebrow" id="capsule-meta">A summer capsule · 2031</p>
+      <h1><span id="capsule-title">A laugh. A note.</span><br><em id="capsule-subtitle">The light that day.</em></h1>
+      <p class="scene-caption" id="capsule-date">02 / 05 &nbsp; · &nbsp; OPENED FIVE YEARS LATER</p>
     </div>
 
     <div class="keepsake-box">
@@ -31,12 +36,50 @@
       <div class="box-body"><button class="open-capsule" type="button">Open when you're ready</button></div>
     </div>
 
-    <p class="memory-caption">Some ordinary days find their way back to us.</p>
-    <p class="popup-fallback" id="popup-fallback" role="status" hidden>
-      Your browser blocked the popup.
-      <a href="blank-capsule.html" target="_blank" rel="noopener">Open your blank capsule in a new tab.</a>
-    </p>
+    <p class="memory-caption" id="capsule-caption">Some ordinary days find their way back to us.</p>
   </main>
+  <dialog class="capsule-dialog" aria-labelledby="your-capsule-title">
+    <button class="close-capsule" type="button" aria-label="Close capsule">×</button>
+    <p class="dialog-eyebrow">A little space for later</p>
+    <h2 id="your-capsule-title">Your capsule</h2>
+    <div class="slideshow" role="group" aria-label="Sample capsule images">
+      <div class="slide-track">
+        <figure class="capsule-slide">
+          <img src="capsule1.svg" alt="Blank sample image placeholder, image one">
+          <figcaption>A moment from the start</figcaption>
+        </figure>
+        <figure class="capsule-slide">
+          <img src="capsule2.svg" alt="Blank sample image placeholder, image two">
+          <figcaption>A note to keep</figcaption>
+        </figure>
+        <figure class="capsule-slide">
+          <img src="capsule3.svg" alt="Blank sample image placeholder, image three">
+          <figcaption>Something to remember</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="slideshow-controls" role="group" aria-label="Slideshow controls">
+      <button class="previous-slide" type="button" aria-label="Previous image">↑</button>
+      <button class="toggle-slideshow" type="button">Pause slideshow</button>
+      <button class="next-slide" type="button" aria-label="Next image">↓</button>
+    </div>
+    <p class="slide-status" id="slide-status">Image 1 of 3</p>
+    <p class="dialog-caption">Your memories will go here.</p>
+    <audio class="capsule-music" controls loop preload="metadata">
+      <source src="ambient-memory.wav" type="audio/wav">
+      Your browser does not support audio playback.
+    </audio>
+    <p class="music-status" id="music-status" role="status">Original ambient music is ready to play.</p>
+    <p class="music-credit">Original ambient loop generated for this project.</p>
+  </dialog>
+  <footer class="example-footer">
+    <p>This is a fictional sample capsule for the Revist class-project preview.</p>
+    <nav aria-label="Footer navigation">
+      <a href="discover.html">Discover more samples</a>
+      <a href="nostalgia.html">Nostalgia science</a>
+      <a href="account.html">View sample account</a>
+    </nav>
+  </footer>
   <script src="example.js"></script>
 </body>
 </html>
